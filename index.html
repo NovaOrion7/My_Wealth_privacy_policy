@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wealth - Hesap Silme ve Gizlilik Politikası</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #333;
+            margin: 24px 0 16px;
+            font-size: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #555;
+            margin: 16px 0 8px;
+            font-size: 16px;
+        }
+        p, li {
+            color: #666;
+            margin-bottom: 12px;
+        }
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+        .highlight {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .steps {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .steps ol {
+            margin-bottom: 0;
+        }
+        .app-name {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 20px;
+            font-size: 14px;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 16px;
+        }
+        .lang-switch a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #667eea;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .lang-switch a:hover {
+            background: #667eea;
+            color: white;
+        }
+        .contact {
+            background: #e8f5e9;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="lang-switch">
+                <a href="#english" onclick="showEnglish()">English</a>
+            </div>
+            
+            <div id="turkish">
+                <h1>💰 My Wealth (Servetim)</h1>
+                <p>Kişisel Servet Takip Uygulaması</p>
+
+                <h2>📋 Hesap Silme Talimatları</h2>
+                
+                <p><span class="app-name">My Wealth</span> uygulamasında hesabınızı ve tüm verilerinizi silmek için aşağıdaki adımları izleyin:</p>
+
+                <div class="steps">
+                    <ol>
+                        <li>Uygulamayı açın</li>
+                        <li><strong>Ayarlar</strong> (⚙️) ekranına gidin</li>
+                        <li>En alta kaydırın</li>
+                        <li><strong>"Verileri Sıfırla"</strong> butonuna tıklayın</li>
+                        <li>Onay iletişim kutusunda <strong>"Onayla"</strong> butonuna tıklayın</li>
+                    </ol>
+                </div>
+
+                <div class="highlight">
+                    <strong>Bu işlem şunları silecektir:</strong>
+                    <ul>
+                        <li>Tüm servet kayıtlarınız</li>
+                        <li>Kullanıcı profiliniz</li>
+                        <li>Uygulama ayarlarınız</li>
+                        <li>Google hesap bağlantınız</li>
+                        <li>Bulutta saklanan verileriniz (Firebase)</li>
+                    </ul>
+                </div>
+
+                <div class="warning">
+                    <strong>⚠️ Uyarı:</strong> Bu işlem geri alınamaz. Tüm verileriniz kalıcı olarak silinecektir.
+                </div>
+
+                <h2>🔒 Gizlilik Politikası</h2>
+
+                <h3>Toplanan Veriler</h3>
+                <p><span class="app-name">My Wealth</span> uygulaması aşağıdaki verileri toplar:</p>
+                <ul>
+                    <li><strong>Servet Kayıtları:</strong> Girdiğiniz varlık ve borç tutarları</li>
+                    <li><strong>Profil Bilgileri:</strong> Doğum yılı, para birimi tercihi</li>
+                    <li><strong>Google Hesap Bilgileri:</strong> (İsteğe bağlı) E-posta, isim, profil fotoğrafı</li>
+                </ul>
+
+                <h3>Verilerin Saklanması</h3>
+                <ul>
+                    <li><strong>Yerel Depolama:</strong> Verileriniz cihazınızda AES-256 şifreleme ile güvenli şekilde saklanır</li>
+                    <li><strong>Bulut Depolama:</strong> Google hesabınızı bağladığınızda veriler Firebase Firestore'da şifreli olarak saklanır</li>
+                </ul>
+
+                <h3>Veri Paylaşımı</h3>
+                <p>Verileriniz üçüncü taraflarla <strong>paylaşılmaz</strong>. Tüm veriler yalnızca sizin erişiminize açıktır.</p>
+
+                <h3>Veri Saklama Süresi</h3>
+                <p>Verileriniz siz silene kadar saklanır. Hesap silme işlemi sonrasında:</p>
+                <ul>
+                    <li>Yerel veriler: Anında silinir</li>
+                    <li>Bulut verileri: 30 gün içinde tamamen silinir</li>
+                </ul>
+
+                <h2>📧 İletişim</h2>
+                <div class="contact">
+                    <p>Sorularınız için bizimle iletişime geçebilirsiniz:</p>
+                    <p><strong>Geliştirici:</strong> Nova Orion</p>
+                    <p><strong>E-posta:</strong> novaorion7@gmail.com</p>
+                </div>
+
+                <p style="margin-top: 24px; font-size: 12px; color: #999;">
+                    Son güncelleme: Aralık 2024
+                </p>
+            </div>
+
+            <div id="english" style="display: none;">
+                <h1>💰 My Wealth</h1>
+                <p>Personal Wealth Tracking Application</p>
+
+                <h2>📋 Account Deletion Instructions</h2>
+                
+                <p>To delete your account and all data in <span class="app-name">My Wealth</span>, follow these steps:</p>
+
+                <div class="steps">
+                    <ol>
+                        <li>Open the application</li>
+                        <li>Go to <strong>Settings</strong> (⚙️)</li>
+                        <li>Scroll to the bottom</li>
+                        <li>Tap <strong>"Reset Data"</strong> button</li>
+                        <li>Tap <strong>"Confirm"</strong> in the confirmation dialog</li>
+                    </ol>
+                </div>
+
+                <div class="highlight">
+                    <strong>This will delete:</strong>
+                    <ul>
+                        <li>All your wealth records</li>
+                        <li>Your user profile</li>
+                        <li>App settings</li>
+                        <li>Google account connection</li>
+                        <li>Cloud-stored data (Firebase)</li>
+                    </ul>
+                </div>
+
+                <div class="warning">
+                    <strong>⚠️ Warning:</strong> This action cannot be undone. All your data will be permanently deleted.
+                </div>
+
+                <h2>🔒 Privacy Policy</h2>
+
+                <h3>Data Collected</h3>
+                <p><span class="app-name">My Wealth</span> collects the following data:</p>
+                <ul>
+                    <li><strong>Wealth Records:</strong> Asset and debt amounts you enter</li>
+                    <li><strong>Profile Information:</strong> Birth year, currency preference</li>
+                    <li><strong>Google Account Info:</strong> (Optional) Email, name, profile photo</li>
+                </ul>
+
+                <h3>Data Storage</h3>
+                <ul>
+                    <li><strong>Local Storage:</strong> Data is securely stored on your device with AES-256 encryption</li>
+                    <li><strong>Cloud Storage:</strong> When you link your Google account, data is stored encrypted in Firebase Firestore</li>
+                </ul>
+
+                <h3>Data Sharing</h3>
+                <p>Your data is <strong>never shared</strong> with third parties. All data is accessible only to you.</p>
+
+                <h3>Data Retention</h3>
+                <p>Your data is stored until you delete it. After account deletion:</p>
+                <ul>
+                    <li>Local data: Deleted immediately</li>
+                    <li>Cloud data: Completely deleted within 30 days</li>
+                </ul>
+
+                <h2>📧 Contact</h2>
+                <div class="contact">
+                    <p>For questions, contact us:</p>
+                    <p><strong>Developer:</strong> Nova Orion</p>
+                    <p><strong>Email:</strong> novaorion7@gmail.com</p>
+                </div>
+
+                <p style="margin-top: 24px; font-size: 12px; color: #999;">
+                    Last updated: December 2024
+                </p>
+
+                <div class="lang-switch" style="margin-top: 20px; text-align: left;">
+                    <a href="#turkish" onclick="showTurkish()">Türkçe</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Nova Orion - My Wealth</p>
+        </div>
+    </div>
+
+    <script>
+        function showEnglish() {
+            document.getElementById('turkish').style.display = 'none';
+            document.getElementById('english').style.display = 'block';
+        }
+        function showTurkish() {
+            document.getElementById('turkish').style.display = 'block';
+            document.getElementById('english').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
